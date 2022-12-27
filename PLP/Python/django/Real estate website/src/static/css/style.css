@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(197, 197, 238);
+}
+
+.tm-header {
+  background: rgb(14, 2, 46);
+  padding: 30px 10px;
+}
+.tm-header::after {
+  content: "";
+  clear: both;
+  display: block;
+  visibility: none;
+}
+
+.tm-header-content {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 1200px;
+  padding: auto;
+  margin: 0 auto;
+}
+
+.tm-nav {
+  float: right;
+}
+
+.tm-nav ul li {
+  display: inline-block;
+}
+
+.tm-nav ul li a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #faf6f6;
+}
+
+.tm-nav ul li a:hover {
+  color: red;
+}
+
+.tm-content {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  max-width: 1200px;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+
+.tm-content a {
+  text-decoration: none;
+  display: inline;
+}
+
+.tm-content a:hover {
+  color: black;
+}
+
+.table {
+  margin: auto;
+  width: 95%;
+  font-size: 20px;
+  font-variant-caps: titling-caps;
+}
+
+.table th {
+  margin: 30px auto;
+  font: bold;
+  text-align: center;
+}
+.table tfoot {
+  text-align: center;
+}
+
+.table tr {
+  margin: 10px auto;
+}
+
+.table tr:nth-child(even) {
+  background-color: rgb(177, 177, 241);
+}
+
+.table tr:nth-child(odd) {
+  background-color: rgb(194, 194, 240);
+}
+
+.table tr a:hover {
+  background-color: rgb(194, 194, 240);
+}
+
+/* .tm-content.back-button {
+  position: relative;
+  text-align: left;
+  font-weight: bold;
+} */

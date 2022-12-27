@@ -1,0 +1,34 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<table class="onelisting table">
+  {% comment %}
+  <caption>
+    Listings
+  </caption>
+  {% endcomment %}
+  <thead>
+    <tr>
+      <th colspan="3">{{ estate.title }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for key, value in estate.items %}
+    <tr>
+      <td>{{ key.title }}</td>
+      <td>{{ value }}</td>
+      <td><a href="/listing/{{ estate.id}}/edit" class="edit">&#9998; Edit</a></td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot></tfoot>
+</table>
+
+<div class="back-button">
+  <p>
+    <a href="/" class="back">&laquo; Back</a>
+  </p>
+</div>
+
+{% endblock content %}
