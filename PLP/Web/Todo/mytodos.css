@@ -1,0 +1,14 @@
+body {
+    background-color: rgb(10, 7, 197);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+}
+
+.inputBox {
+    margin: 10px}
+
+#displaytodo {
+    margin-top: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    justify-content: center;
+}

@@ -12,4 +12,5 @@ class ListingForm(ModelForm):
             "num_bathrooms",
             "sq_footage",
             "address",
+            "image",
         ]

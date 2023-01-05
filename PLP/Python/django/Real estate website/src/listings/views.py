@@ -25,14 +25,14 @@ def listing_retrieve(request, pk):
     print(listing)
     print(listing.title, listing.price, listing.address)
     print(context)
-    
+
     return render(request, "listing.html", context)
 
 
 def listing_create(request):
     form = ListingForm()
     if request.method == "POST":
-        form = ListingForm(request.POST)
+        form = ListingForm(request.POST, request.FILES)
         print(request.POST)
         if form.is_valid():
             form.save()
@@ -48,7 +48,7 @@ def listing_update(request, pk):
     Listing = listing.objects.get(id=pk)
     form = ListingForm(instance=Listing)
     if request.method == "POST":
-        form = ListingForm(request.POST, instance=Listing)
+        form = ListingForm(request.POST, files=request.FILES, instance=Listing)
         print(request.POST)
         if form.is_valid():
             form.save()
