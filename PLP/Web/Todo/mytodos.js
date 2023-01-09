@@ -18,23 +18,56 @@ else {
 //Views
 
 // Display saved todos
-function renderTodos(todos) {
+function renderTodos(todos){
+    let boxwraper = document.createElement("section");
+    boxwraper.setAttribute("id", "boxwrapper");
+    boxwraper.innerHTML = "";
+    boxwraper.style. backgroundColor = "rgb(65, 6, 72)";
+    document.body.appendChild(boxwraper);
+    renderUpdatedTodos(todos)
+    addCheckboxes(todos)  
+    
+ }
+
+ function renderUpdatedTodos(todos){     
     todos.forEach(todo => {
         let element = document.createElement("div");
-        element.setAttribute("className", "displaytodo-"+todo.id);
-        element.setAttribute("id", "displaytodo");
+        element.setAttribute("className", "displaytodo");
+        element.setAttribute("id", "displaytodo" + todo.id);
+        element.style.outline = "2px solid rgb(72, 6, 46)";
+        element.style.margin = "4px auto";
+        element.style.position = "relative";
+        element.style.width = "90%";
         element.innerHTML = todo.title + " " + todo.date;
-        document.body.appendChild(element);    
-    });
+        
+        boxwraper = document.getElementById("boxwrapper")
+        boxwraper.appendChild(element);    
+    }
+     );
+}
+
+function addCheckboxes(todos){
+    todos.forEach(todo => {
+        let checkbox = document.createElement("input");
+        checkbox.setAttribute("type", "checkbox");
+        checkbox.setAttribute("unchecked", "unchecked");
+        checkbox.setAttribute("id", "checkbox" + todo.id);
+        checkbox.style.marginLeft = "auto";
+        checkbox.style.float = "right";
+        checkbox.style.width = "10%";
+
+
+        document.getElementById("displaytodo" + todo.id).appendChild(checkbox);
+}
+    );
 }
 
 // Inputs to add todos
 function renderInputSection(){
-
     let inputbox = document.createElement("input");
     inputbox.type = "text";
     inputbox.id = "text-input-box";
-    inputbox.className = "inputBox"
+    inputbox.className = "inputBox";
     inputbox.placeholder = "new todo";
     document.body.appendChild(inputbox);
 
@@ -56,7 +89,7 @@ function renderTableSection(todos){
 
     function generateTableHead(table, data){
         let thead = table.createTHead();
-        let row = thead.createRow();
+        let row = thead.insertRow();
         for (let key of data){
             let th = document.createElement("th");
             let text = document.createTextNode(key);
@@ -88,7 +121,8 @@ function addTodo(){
     let id = new Date().getTime();
     todos.push({ title, date, id });
     window.localStorage.setItem("todos", JSON.stringify(todos));
-    renderTodos(todos);
+    document.getElementById("boxwrapper").innerHTML = ""
+    renderUpdatedTodos(todos);
 }
 
 console.log(todos);
