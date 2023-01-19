@@ -1,6 +1,7 @@
 from django.forms import ModelForm
 from .models import PersonalInfo
 
+
 class PersonalInfoForm(ModelForm):
     class Meta:
         model = PersonalInfo
@@ -11,5 +12,8 @@ class PersonalInfoForm(ModelForm):
             "gender",
             "email",
             "telephone",
+            "maritalStatus",
             "religion",
+            "language",
+            "nationality",
         ]

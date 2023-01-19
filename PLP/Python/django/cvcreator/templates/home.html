@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block content %}
+<h1 align="center">Person's data available for:</h1>
+<div id="personslist" class="personslist">
+  <p margin="10px">
+    {% for entry in members %} {{entry.name}} {{entry.idNumber}} {% endfor %}
+  </p>
+</div>
+
+{% endblock content %}

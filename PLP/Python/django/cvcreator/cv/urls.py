@@ -17,11 +17,11 @@ from django.contrib import admin
 from django.urls import path
 from cvcreator.views import (
     viewMembers,
-    create,
+    createnewinfo,
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("members/", viewMembers, name='viewMembers'),
-    path("viewinfo/", create, name='create'),
+    path("", viewMembers, name='viewMembers'),
+    path("createnewinfo/", createnewinfo, name='createnewinfo'),
 ]
