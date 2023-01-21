@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% for key, value in infos.items %}
+
+<p> {{key}}:  {{value}}</p>
+
+
+{% endfor %}
+
+{% comment %} <p>{{infos}}</p> {% endcomment %}
+<button><a href="/getdoc/{{infos.idNumber}}"> Download CV </a></button>
+
+{% endblock content%}

@@ -9,3 +9,7 @@ body {
   text-decoration-color: azure;
   color: azure;
 }
+
+.centre {
+  text-align:centre
+}

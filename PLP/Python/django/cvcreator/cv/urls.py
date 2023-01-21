@@ -16,12 +16,20 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from cvcreator.views import (
-    viewMembers,
+    listCustomers,
     createnewinfo,
+    customerInfo,
+    getDocument,
+    home,
+    # testDocument,
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", viewMembers, name='viewMembers'),
+    path("", home, name='home'),
+    path("listcustomers", listCustomers, name='listCustomers'),
     path("createnewinfo/", createnewinfo, name='createnewinfo'),
+    path("customerinfo/<pk>", customerInfo, name='customerInfo'),
+    path("getdoc/<pk>", getDocument, name='getDocument'),
+    # path("seedoc/", testDocument, name='testDocument'),
 ]
