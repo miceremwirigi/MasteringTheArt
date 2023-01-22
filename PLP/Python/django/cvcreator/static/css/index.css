@@ -1,15 +1,81 @@
-body {
-  background-color: darkgreen;
-  text-decoration-color: azure;
-  color: azure;
-}
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
 
+/* whole page format */
 .bodycontent {
-  background-color: darkgreen;
-  text-decoration-color: azure;
-  color: azure;
+  background-color: #DDDDDD;
+  text-decoration-color: darkblue;
+  height: auto;
+  font-family: 'Comic Sans', 'Helvetica', 'Arial', sans-serif;
 }
 
-.centre {
-  text-align:centre
+/* Header formats */
+.bodycontent .header {
+  min-height: 100px;
+  background-color: black;
+  color: #fff;
+  margin-bottom: 1em;
+  padding-right: 3em;
+}
+
+.header-title{
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.navbar ul {
+  text-align: right;
+} 
+
+.navbar ul li{
+  display: inline-block;
+  margin-left: 3em;
+}
+
+
+li a {  
+  text-decoration: none;
+  color: #fff;
+  font-size: 1em;
+}
+
+.nobull {
+  list-style-type: none;
+}
+
+/* Section formats */
+.bodycontent .section{
+  min-height: 500px;
+  font-size: 1.2em;
+  margin-left: 3em;
+}
+
+table {
+  width: 50%;
+  
+}
+
+a {  
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+a:hover{
+  color: red;
+  margin: 5px;
+  background-color: rgba(0,255,255,0.3);
+}
+
+
+/* Footer Styles */
+.bodycontent .footer {
+  min-height: 50px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  
 }

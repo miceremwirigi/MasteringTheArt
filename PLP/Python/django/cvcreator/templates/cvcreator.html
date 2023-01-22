@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{%block content%}
+
+<div class="welcome">
+    <div>
+        <p> Welcome to CV Creator </p>
+    </div>
+    <div>
+        <p> 
+            Click button below to enter info and begin creating your CV
+        </p>
+
+        <a href="{% url 'createnewinfo' %}"><button type="button"> Create My CV </button></a>
+
+        <p> 
+            If info is already entered, click here  
+        </p>
+        
+        <a href="{% url 'listCustomers' %}"><button type="button"> Show list</button></a>
+    </div>
+    
+
+    <div></div>
+</div>
+
+{%endblock content%}

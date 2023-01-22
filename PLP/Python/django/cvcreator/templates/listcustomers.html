@@ -4,7 +4,7 @@
   <p margin="10px">
     {% for entry in members %} {{entry.name}} {{entry.idNumber}}
     <p></p>
-      <button><a color=red href="customerinfo/{{entry.idNumber}}"> Details </a></button>
+      <button><a href="customerinfo/{{entry.idNumber}}"> Details </a></button>
     <p></p>
     {% endfor %}
   </p>

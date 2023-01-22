@@ -12,8 +12,8 @@ from docx import *
 from docx.shared import Inches
 
 
-def home(request):
-    return render(request, "home.html")
+def cvcreator(request):
+    return render(request, "cvcreator.html")
 
 # view to show members in the database
 
@@ -34,12 +34,16 @@ def createnewinfo(request):
         form = PersonalInfoForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            return redirect(reverse("/"))
+            return HttpResponseRedirect(reverse("cvcreator"))
 
     context = {
         "form": form,
     }
     return render(request, "createnewinfo.html", context)
+
+
+def deleteCustomer(request, pk):
+    customer = PersonalInfo.objects.filter(id == pk)
 
 # Show details of all information of specific customers, e.g., name, ID, phone etc.
 

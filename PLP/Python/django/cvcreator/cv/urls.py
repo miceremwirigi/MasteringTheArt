@@ -20,13 +20,13 @@ from cvcreator.views import (
     createnewinfo,
     customerInfo,
     getDocument,
-    home,
+    cvcreator,
     # testDocument,
 )
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("", home, name='home'),
+    path("", cvcreator, name='cvcreator'),
     path("listcustomers", listCustomers, name='listCustomers'),
     path("createnewinfo/", createnewinfo, name='createnewinfo'),
     path("customerinfo/<pk>", customerInfo, name='customerInfo'),

@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,18 +17,37 @@
       type="text/css"
       href="{% static 'css/index.css' %}"
     />
-    <title>Quick CV</title>
+    <title>Cyber Tool</title>
   </head>
   <body>
-    <div id="bodycontent" class="bodycontent">
-      {% block content %}
-      <form action="" method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        <p>{{ form.as_p }}</p>
-        <input type="submit" value="Submit" />
-      </form>
+    <div class="bodycontent">
+      <div class="header">
+        <p class="header-title">Smart Cirriculum Vitae</p>
+        <div class="navbar">
+          <ul class="nobull">
+            <li><a href="{% url 'cvcreator' %}">Create New CV</a></li>
+            <li><a href="{% url 'listCustomers' %}">Show available Cvs</a></li>
+            <li>About CV creator</li>
+            <li>Contact US</li>
+          </ul>
+        </div>
+      </div>
 
-      {% endblock content %}
+      <div class="section">
+        {% block content %}
+        <form action="" method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <p>{{ form.as_p }}</p>
+          <input type="submit" value="Submit" />
+        </form>
+
+        {% endblock content %}
+      </div>
+      <div class="footer">
+        <p>
+          Copyright 2023
+        </p>
+      </div>
     </div>
   </body>
 </html>
