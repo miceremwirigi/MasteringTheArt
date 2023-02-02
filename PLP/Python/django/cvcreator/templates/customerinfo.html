@@ -5,13 +5,15 @@
 <table>
     {% for key, value in infos.items %}
     <tr>
-        <td>{{key}}:</td>
+        <td style="min-width:10em">{{key}}:</td>
         <td>{{value}}</td>
     </tr>
     {% endfor %}
 </table>
 
 
-<button><a href="/getdoc/{{infos.idNumber}}"> Download CV </a></button>
+<button><a href="/getdoc/{{infos.idNumber}}/"> Download CV </a></button>
+
+<button><a href="/deletecustomer/{{infos.idNumber}}/"> Delete Record </a></button>
 
 {% endblock content%}

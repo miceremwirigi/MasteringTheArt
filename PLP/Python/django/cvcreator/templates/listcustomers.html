@@ -1,12 +1,16 @@
 {% extends "base.html" %} {% block content %}
 <h1 class="center">Data available for:</h1>
 <div id="personslist" class="personslist">
-  <p margin="10px">
-    {% for entry in members %} {{entry.name}} {{entry.idNumber}}
-    <p></p>
-      <button><a href="customerinfo/{{entry.idNumber}}"> Details </a></button>
-    <p></p>
+  <p style="margin:10px">
+    
+    <table style="justify-content:centre">
+      {% for entry in members %}
+       <tr>
+        <td style="max-width:60px"> {{entry.name}} </td>
+        <td> <button><a href="customerinfo/{{entry.idNumber}}"> See Details </a></button></td>
+      </tr>   
     {% endfor %}
+    </table>
   </p>
 </div>
 

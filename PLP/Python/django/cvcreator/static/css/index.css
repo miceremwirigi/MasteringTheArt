@@ -6,6 +6,7 @@
 
 /* whole page format */
 .bodycontent {
+  display: run-in;
   background-color: #DDDDDD;
   text-decoration-color: darkblue;
   height: auto;
@@ -56,6 +57,7 @@ li a {
 
 table {
   width: 50%;
+  
   
 }
 
