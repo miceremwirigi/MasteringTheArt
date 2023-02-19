@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  /* justify-content: space-between; */
+  min-height: 15vh;
+  background-color: black;
+  color: aliceblue;
+}
+
+.navigation {
+  display: inline-block;
+  background-color: #333;
+  color: azure;
+  width: 100%;
+  height:fit-content;
+  margin-top: 0px;
+
+  
+}
+
+.navigation ul {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.navigation li {
+  display: inline;
+  float: left;
+}
+
+.navigation li a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  padding: 14px 16px;
+}
+
+.navigation li a:hover {
+  background-color: black;
+}
+
+.usernav li{
+  float: right;
+}
+
+form.search {
+  display: inline;
+  margin: 14px 16px;
+  float: right;
+}
+
+form input{
+  height: 20px;
+  width: 200px;
+
+}
+
+th, td {
+  padding: 10px;
+}
+
+/* .navbar {
+  display: inline-block;
+  margin-top: 1rem;
+  margin-left: 3rem;
+     
+}
+
+.header ul {
+  list-style-type: none;  
+  margin: 0px;
+  padding: 0px;
+  overflow: hidden;  
+}
+
+.header li {
+  display: inline;
+  float:left;
+  
+}
+
+.header li a {
+  display: block;
+  margin-right: 1rem;  
+  padding: 0.5rem;  
+  text-decoration: none;
+  text-align: center;
+  color: aliceblue;
+  background-color: rgb(3, 0, 29);
+}
+
+.header li a:hover {
+  background-color: blue;
+  color:rgb(63, 3, 3);
+}
+
+
+.usernavbar {
+  display:flex; 
+  justify-content: right;
+  margin-right: 3rem;  
+}
+
+.user {
+  display: inline-block;
+  margin-top: 1rem;  
+} */
+
+.content {
+  background-color: rgb(26, 1, 65);
+  display: flex;
+  justify-content:space-around;
+  min-height: 75vh;
+  color: rgb(184, 184, 184);
+  width: auto;
+}
+
+
+
+.footer {
+  display: flex;
+  min-height: 10vh;
+  background-color: black;
+  color: aliceblue;
+}
+
+span {
+  /* background-color: wheat; */
+  color:rgb(247, 244, 244);
+}
+
+
+/* .intro {
+  background-color: aqua;  
+  width: 25%;
+  height:max-content;
+} */
+
+
+.sidebar {
+  height: 75vh;
+  position:relative;
+  left:0px;  
+  /* border: 2px solid blue; */
+  width:auto;
+  height:max-content;
+  color: rgb(244, 244, 247)
+}
+
+
+
+.sidebar h3 {  
+  font: 600;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px 0;
+  color: greenyellow;
+}
+
+.sidebar ol {  
+  margin-left: 30px;
+  list-style-type:upper-alpha;
+}
+
+.sidebar h4 {
+  margin-left: 0px;
+  font: 400;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+
+
+
+.calender {
+  /* border: 2px solid blueviolet; */
+  width:auto;
+  height:max-content;
+}

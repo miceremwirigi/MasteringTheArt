@@ -1,0 +1,39 @@
+{% extends 'workspace/base.html' %} {% block content %} 
+{% comment %} {% load static %} {% endcomment %}
+
+  <div class="sidebar">
+    <h3>
+      <p>
+        {{workspace}}<br />        
+      </p>
+    </h3>
+
+    
+      <ol>
+      {% for assignment, duedate in assignments.items %}
+        <li>
+          <p>{{assignment}}:   Due <span>    {{duedate}}</p>
+          <br />
+        </li>
+      {% endfor %}
+      </ol>
+    
+    <h4>
+        <div>
+          <br />
+          <p>As of  <span> {{current_day}}</span>
+          <span> {{time}}</span>       
+          <span>{{current_month}}</span>
+          <span>{{current_year}}</span><br />
+        </div>
+      </p>
+    </h4>
+  </div>
+
+  <div class="calender">
+    {{cal|safe}}
+  </div>
+
+
+
+{% endblock content %}
