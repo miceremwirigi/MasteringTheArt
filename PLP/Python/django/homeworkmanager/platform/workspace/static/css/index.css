@@ -145,7 +145,6 @@ span {
 
 
 .sidebar {
-  height: 75vh;
   position:relative;
   left:0px;  
   /* border: 2px solid blue; */
@@ -182,4 +181,17 @@ span {
   /* border: 2px solid blueviolet; */
   width:auto;
   height:max-content;
+}
+
+.login-section {
+  height: max-content;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+
+form .form-control {
+  margin:50px;
+  padding: 30px;
+  border: 3px solid red;
 }
