@@ -18,6 +18,7 @@ else {
 //Views
 
 // Display saved todos
+// function to create a section to display todos
 function renderTodos(todos){
     let boxwraper = document.createElement("section");
     boxwraper.setAttribute("id", "boxwrapper");
@@ -29,6 +30,7 @@ function renderTodos(todos){
     
  }
 
+ //Section to display 
  function renderUpdatedTodos(todos){     
     todos.forEach(todo => {
         let element = document.createElement("div");
@@ -61,6 +63,19 @@ function addCheckboxes(todos){
 }
     );
 }
+
+//Delete, done and strikethrough buttons
+function deleteButton(displaytodoId){   
+    deleteButton = document.createElement("button");
+    deleteButton.setAttribute("type", "submit");
+    deleteButton.setAttribute("class","button");
+    deleteButton.setAttribute("id", "delete"+displaytodoId);
+    deleteButton.innerHTML = "Delete";
+
+    document.getElementById("displaytodoId").appendChild(deleteButton);
+
+}
+
 
 // Inputs to add todos
 function renderInputSection(){
@@ -109,6 +124,9 @@ function renderTableSection(todos){
 renderInputSection();
 renderTodos(todos);
 renderTableSection(todos);
+
+// Is checkbox checked.
+checkbox = document.querySelector("input[type=checkbox], input[id=checkbox1]");
 
 
 

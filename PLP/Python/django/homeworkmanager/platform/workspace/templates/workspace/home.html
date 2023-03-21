@@ -2,6 +2,12 @@
 {% comment %} {% load static %} {% endcomment %}
 
   <div class="sidebar">
+    {% if messages %}
+    {% for message in messages %}
+        <p>{{ message }}<br/>
+        <p/>    
+    {% endfor %}
+    {% endif %}
     <h3>
       <p>
         {{workspace}}<br />        

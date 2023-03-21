@@ -1,16 +1,16 @@
- * {
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-} 
+}
 
 /* whole page format */
 .bodycontent {
-  display: run-in;
-  background-color: #DDDDDD;
+  /* display: flex; */
+  background-color: #dddddd;
   text-decoration-color: darkblue;
   height: auto;
-  font-family: 'Comic Sans', 'Helvetica', 'Arial', sans-serif;
+  font-family: "Comic Sans", "Helvetica", "Arial", sans-serif;
 }
 
 /* Header formats */
@@ -22,34 +22,35 @@
   padding-right: 3em;
 }
 
-.header-title{
+.header-title {
   text-align: center;
   font-size: 1.5em;
   font-weight: bold;
 }
 
 .navbar ul {
+  /* display: flex; */
+  /* justify-content: space-between; */
   text-align: right;
-} 
+}
 
-.navbar ul li{
+.navbar ul li {
   display: inline-block;
   margin-left: 3em;
 }
 
-
-li a {  
+li a {
   text-decoration: none;
   color: #fff;
   font-size: 1em;
 }
 
-.nobull {
+.nobullet {
   list-style-type: none;
 }
 
 /* Section formats */
-.bodycontent .section{
+.bodycontent .section {
   min-height: 500px;
   font-size: 1.2em;
   margin-left: 3em;
@@ -57,21 +58,18 @@ li a {
 
 table {
   width: 50%;
-  
-  
 }
 
-a {  
+a {
   text-decoration: none;
   font-size: 1.2em;
 }
 
-a:hover{
+a:hover {
   color: red;
   margin: 5px;
-  background-color: rgba(0,255,255,0.3);
+  background-color: rgba(0, 255, 255, 0.3);
 }
-
 
 /* Footer Styles */
 .bodycontent .footer {
@@ -79,5 +77,4 @@ a:hover{
   background-color: black;
   color: #fff;
   text-align: center;
-  
 }

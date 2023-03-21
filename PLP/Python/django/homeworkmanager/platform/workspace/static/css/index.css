@@ -16,10 +16,8 @@
   background-color: #333;
   color: azure;
   width: 100%;
-  height:fit-content;
+  height: fit-content;
   margin-top: 0px;
-
-  
 }
 
 .navigation ul {
@@ -46,7 +44,7 @@
   background-color: black;
 }
 
-.usernav li{
+.usernav li {
   float: right;
 }
 
@@ -56,13 +54,13 @@ form.search {
   float: right;
 }
 
-form input{
+form input {
   height: 20px;
   width: 200px;
-
 }
 
-th, td {
+th,
+td {
   padding: 10px;
 }
 
@@ -116,13 +114,12 @@ th, td {
 .content {
   background-color: rgb(26, 1, 65);
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   min-height: 75vh;
+  /* max-width: 100vh; */
   color: rgb(184, 184, 184);
   width: auto;
 }
-
-
 
 .footer {
   display: flex;
@@ -133,9 +130,8 @@ th, td {
 
 span {
   /* background-color: wheat; */
-  color:rgb(247, 244, 244);
+  color: rgb(247, 244, 244);
 }
-
 
 /* .intro {
   background-color: aqua;  
@@ -143,47 +139,41 @@ span {
   height:max-content;
 } */
 
-
 .sidebar {
-  position:relative;
-  left:0px;  
+  position: relative;
+  left: 0px;
   /* border: 2px solid blue; */
-  width:auto;
-  height:max-content;
-  color: rgb(244, 244, 247)
+  width: auto;
+  height: max-content;
+  color: rgb(244, 244, 247);
 }
 
-
-
-.sidebar h3 {  
+.sidebar h3 {
   font: 600;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   padding: 10px 0;
   color: greenyellow;
 }
 
-.sidebar ol {  
+.sidebar ol {
   margin-left: 30px;
-  list-style-type:upper-alpha;
+  list-style-type: upper-alpha;
 }
 
 .sidebar h4 {
   margin-left: 0px;
   font: 400;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
 }
 
-
-
-
 .calender {
   /* border: 2px solid blueviolet; */
-  width:auto;
-  height:max-content;
+  width: auto;
+  height: max-content;
 }
 
-.login-section {
+.content.login-section {
   height: max-content;
   position: relative;
   left: 50%;
@@ -191,7 +181,19 @@ span {
 }
 
 form .form-control {
-  margin:50px;
+  margin: 50px;
   padding: 30px;
   border: 3px solid red;
+}
+/* 
+h1 {
+  left: 50px;
+  margin: 50px;
+  padding: 30px;
+} */
+
+h3 {
+  left: 50px;
+  margin: 50px;
+  padding: 30px;
 }
